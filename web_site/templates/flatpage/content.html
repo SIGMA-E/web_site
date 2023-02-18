@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ flatpage.title }}</title>
+<!--        подключил парочку стилей css напрямую-->
+        <style type="text/css">
+            h3 {
+                font-family: Cumbria;
+            }
+            i {
+                font-size: 120%;
+            }
+            h4 {
+                text-indent: 20px;
+                text-align: justify;
+            }
+        </style>
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top" background="{% static 'assets/img/bg-signup.jpg' %}">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <p class="navbar-brand">Vitaliy Bekeshev (PDEV-22)</p>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/poem/">Poem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/translate/">Translate</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">Story(Admin)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/content/">Content x2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">{{ flatpage.title }}</h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h3>
+                            <p class="text-white-50">
+                                {{ flatpage.content }}
+                                {{ flatpage.content }}
+                            </p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
